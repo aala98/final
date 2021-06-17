@@ -1,212 +1,167 @@
-@extends('user.dashboard')
+<div class="overlay">
+    <div id="pageintro" class="hoc clear">
+      <article>
+        <h3 class="heading">Le plus grand complexe du professionnel Marché</h3>
+        <p></p>
 
-@section('content')
 
-<!-- This is an example component -->
-<div>
-    <div class="relative items-center justify-center">
-      <!-- Header Text-->
-      <h1 class="text-center text-2xl font-bold p-4 bg-gray-800 text-gray-400">Choose Your Next Adventure</h1>
-      <!-- All Cards Container -->
-      <div class="lg:flex items-center container mx-auto my-auto">
+          <div class="w-full mx-auto rounded-xl bg-gray-100 shadow-lg p-10 text-gray-800 relative overflow-hidden resize-x min-w-80 max-w-3xl" x-data="app()" x-init="generatePassword()">
+            <div class="search-box">
+            <form action=""  method="post">
+                @csrf
+            <div class="relative mt-1">
 
-        <!-- Card 1 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/29/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Médecins</h3>
-            <p class="text-justify">The be might what days revellers, which sought to a nor. Land from to suits his some. Saw him counsel begun mother though but. Ofttimes soils of since mighty pollution.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
+                <input type="text" id="password" class="w-full pl-3 pr-10 py-2 border-2 border-gray-200 rounded-xl hover:border-gray-300 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Qu'est-ce que tu cherches?">
+
         </div>
-        <!-- Card 2 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/247/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Pédiatrie</h3>
-            <p class="text-justify">Rapping wind chamber have was has, is all of thy stood chamber his bore. Nameless or as door tapping both thy grew lenore. We my still respiterespite lie, with lordly.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/342/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Psychiatrie</h3>
-            <p class="text-justify">Upon but that objects tis sore would what. Who formed in coffined heartless shades, there mine was heart vast flaunting he low relief uncouth, dear and and but suffice ofttimes.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="relative mt-1">
 
+            <input type="text" class="w-full pl-3 pr-10 py-2 border-2 border-gray-200 rounded-xl hover:border-gray-300 focus:outline-none focus:border-blue-500 transition-colors" name="user_address" placeholder="Votre emplacement">
+
+    </div>
+              <div class="absolute top-0 left-0 w-full h-2 flex">
+                  <div class="h-2 bg-blue-500 flex-1"></div>
+                  <div class="h-2 bg-red-500 flex-1"></div>
+                  <div class="h-2 bg-yellow-500 flex-1"></div>
+                  <div class="h-2 bg-blue-500 flex-1"></div>
+                  <div class="h-2 bg-green-500 flex-1"></div>
+                  <div class="h-2 bg-red-500 flex-1"></div>
+              </div>
+
+        </form>
+          </div>
+
+
+        <footer><a class="btn" href="#">Rechercher</a></footer>
+      </article>
     </div>
   </div>
-
-  <div>
-    <div class="relative items-center justify-center">
-      <!-- Header Text-->
-      <!-- All Cards Container -->
-      <div class="lg:flex items-center container mx-auto my-auto">
-
-        <!-- Card 1 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/29/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">dentiste</h3>
-            <p class="text-justify">The be might what days revellers, which sought to a nor. Land from to suits his some. Saw him counsel begun mother though but. Ofttimes soils of since mighty pollution.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/247/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Ophtalmologie</h3>
-            <p class="text-justify">Rapping wind chamber have was has, is all of thy stood chamber his bore. Nameless or as door tapping both thy grew lenore. We my still respiterespite lie, with lordly.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/342/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Otorhinolaryngologie</h3>
-            <p class="text-justify">Upon but that objects tis sore would what. Who formed in coffined heartless shades, there mine was heart vast flaunting he low relief uncouth, dear and and but suffice ofttimes.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div>
-    <div class="relative items-center justify-center">
-      <!-- Header Text-->
-
-      <!-- All Cards Container -->
-      <div class="lg:flex items-center container mx-auto my-auto">
-
-        <!-- Card 1 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/29/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Ingénieurs</h3>
-            <p class="text-justify">The be might what days revellers, which sought to a nor. Land from to suits his some. Saw him counsel begun mother though but. Ofttimes soils of since mighty pollution.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/247/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Avocats</h3>
-            <p class="text-justify">Rapping wind chamber have was has, is all of thy stood chamber his bore. Nameless or as door tapping both thy grew lenore. We my still respiterespite lie, with lordly.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="lg:m-4 shadow-md hover:shadow-lg hover:bg-gray-100 rounded-lg bg-white my-12 mx-8">
-          <!-- Card Image -->
-          <img src="https://picsum.photos/id/342/2106/1404" alt=""class="overflow-hidden">
-          <!-- Card Content -->
-          <div class="p-4">
-            <h3 class="font-medium text-gray-600 text-lg my-2 uppercase">Notaire</h3>
-            <p class="text-justify">Upon but that objects tis sore would what. Who formed in coffined heartless shades, there mine was heart vast flaunting he low relief uncouth, dear and and but suffice ofttimes.</p>
-            <div class="mt-5">
-              <a href="" class="hover:bg-gray-700 rounded-full py-2 px-3 font-semibold hover:text-white bg-gray-400 text-gray-100">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Create Post</div>
-                <div class="card-body">
-
-                    @error('title')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-
-                    <form method="post" action="{{ route('post.store') }}">
-                        <div class="form-group">
-                            @csrf
-                            <label class="label">Post Title: </label>
-                            <input type="text" name="title" class="form-control" required/>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Create post"/>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+<div class="wrapper row3">
+  <main class="hoc container clear">
 
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <table class="table table-striped">
-                <thead>
-                    <th>No</th>
-                    <th>Title</th>
-                    <th>Action</th>
-                </thead>
-                <tbody>
-                @foreach($posts as $post)
-                <tr>
-                    <td>{{ $post->id }}</td>
-                    <td>{{ $post->title }}</td>
-                    <td>
-                        <a href="{{ route('post.show',$post->id) }}" class="btn btn-sm btn-outline-danger py-0" style="font-size: 0.8em;">Read Post</a>
-                    </td>
-                </tr>
-                @endforeach
-                </tbody>
+    <div class="blogs__wraper bg-green-300  py-20 px-20">
 
-            </table>
+        <div class="flex justify-between items-center">
+
+     <div class="blogs bg-white mr-5">
+         <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+         <div class="p-5">
+        <h1 class="text-2xl font-bold text-green-800 py-2">Avocats</h1>
+         <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+         <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+         </div>
+     </div>
+
+
+     <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">ingénieurs</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
         </div>
     </div>
+
+    <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">notaire</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+        </div>
+    </div>
+
+    <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">Medecins</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="blogs__wraper bg-green-300  py-20 px-20">
+
+        <div class="flex justify-between items-center">
+
+     <div class="blogs bg-white mr-5">
+         <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+         <div class="p-5">
+        <h1 class="text-2xl font-bold text-green-800 py-2">dentiste</h1>
+         <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+         <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+         </div>
+     </div>
+
+
+     <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">pediatrie</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+        </div>
+    </div>
+
+    <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">neurologie</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+        </div>
+    </div>
+
+    <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">orthopédie</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="blogs__wraper bg-green-300  py-20 px-20">
+
+        <div class="flex justify-between items-center">
+
+     <div class="blogs bg-white mr-5">
+         <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+         <div class="p-5">
+        <h1 class="text-2xl font-bold text-green-800 py-2">psychiatrie</h1>
+         <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+         <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+         </div>
+     </div>
+
+
+     <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">ophtalmologie</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+        </div>
+    </div>
+
+    <div class="blogs bg-white mr-5">
+        <img src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold text-green-800 py-2">otorhinolaryngologie</h1>
+        <p class="bg-white text-sm text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae qui distinctio ex soluta? Voluptates, ea! Esse, natus. Quas possimus laboriosam consectetur deserunt ea sapiente. Dicta ipsam atque voluptatem provident!</p>
+        <a href="" class="py-2 px-3 mt-4 px-6 text-white bg-green-500 inline-block rounded">Read More</a>
+        </div>
+    </div>
+
+
+
+    </div>
+    <div class="clear"></div>
+  </main>
 </div>
-@endsection

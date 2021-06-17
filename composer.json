@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "munafio/chatify": "^1.2",
+        "rinvex/laravel-bookings": "^5.0",
         "santigarcor/laratrust": "^6.3"
     },
     "require-dev": {

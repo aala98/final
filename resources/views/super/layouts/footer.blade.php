@@ -1,8 +1,5 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.1.0
-    </div>
+    <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">Copyright @2021</p>
+
   </footer>

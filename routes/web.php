@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
-route::get('profile',[DashboardController::class,'profile'])->name('p.profile');
+
 
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::get('/', 'AdminController@welcome');
@@ -49,22 +49,22 @@ Route::PATCH('/users/{user}/update', [UserController::class,'update'])->name('us
 
 Route::delete('/users/{user}/destroy', [UserController::class,'destroy'])->name('users.destroy');
 
+route::get('profile',[DashboardController::class,'profile'])->name('p.profile');
+route::get('profile',[DashboardController::class,'supprofile'])->name('s.profile');
+
+
+// Route::get('/posts',[PostController::class,'index'] )->name('posts');
+// Route::get('/post/create', [PostController::class,'create'])->name('post.create');
+// Route::post('/post/store', [PostController::class,'store'])->name('post.store');
+// Route::get('/post/show/{id}', [PostController::class,'show'])->name('post.show');
+
+// Route::get('/accueil', [PostController::class,'accueil'])->name('acueil');
 
 
 
+// Route::post('/comment/store', [CommentController::class,'store'])->name('comment.add');
 
-Route::get('/posts',[PostController::class,'index'] )->name('posts');
-Route::get('/post/create', [PostController::class,'create'])->name('post.create');
-Route::post('/post/store', [PostController::class,'store'])->name('post.store');
-Route::get('/post/show/{id}', [PostController::class,'show'])->name('post.show');
-
-Route::get('/accueil', [PostController::class,'accueil'])->name('acueil');
-
-
-
-Route::post('/comment/store', [CommentController::class,'store'])->name('comment.add');
-
-Route::post('/reply/store',   [CommentController::class,'replyStore'])->name('reply.add');
+// Route::post('/reply/store',   [CommentController::class,'replyStore'])->name('reply.add');
 
 
 //  Route::resource('appointments',[AppointmentController::class] );

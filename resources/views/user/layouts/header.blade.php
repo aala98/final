@@ -1,36 +1,49 @@
+<nav>
+<header>
+<div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+      <div class="fl_left">
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+          <li><i class="fas fa-phone rgtspace-5"></i> {{ Auth::user()->tel }}</li>
+          <li><i class="far fa-envelope rgtspace-5"></i> {{ Auth::user()->email }}</li>
+        </ul>
+      </div>
+      <div class="fl_right">
+        <ul class="nospace">
+          <li><a href="{{route('logout') }}" onclick="event.preventDefault();document.
+              getElementById('logout-form').submit();"" title="Login"><form action="{{route('logout')}}" id="logout-form" method="POST">@csrf</form>
+              <i class="fas fa-sign-in-alt"></i></a></li>
 
-    <!-- Header -->
-    <header class="">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container">
-            <a class="navbar-brand" href="index.html"><h2>R <em>t</em></h2></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="{{ route('acueil') }}">Accueil
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="products.html">reservation</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">Information</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('chatify') }}">Message</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                    href="{{route('logout') }}" onclick="event.preventDefault();document.
-                    getElementById('logout-form').submit();">Logout</a>
-                    <form action="{{route('logout')}}" id="logout-form" method="POST">@csrf</form>
-		                  </li>
+
+          </li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+  </div>
+
+  <div class="bgded" style=" background-image:url('user/assets/images/demo/backgrounds/01.png') ">
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <div id="logo" class="fl_left">
+          <h1><a href="index.html">PL</a></h1>
+          <!-- ################################################################################################ -->
+        </div>
+        <nav id="mainav" class="fl_right">
+          <!-- ################################################################################################ -->
+          <ul class="clear">
+            <li class="active"><a href="index.html">Accueil</a></li>
+            <li><a class="drop" href="#">Info</a>
+              <ul>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+
               </ul>
-            </div>
-          </div>
+            </li>
+
+            <li><a href="#">Reservation</a></li>
+            <li><a href="#">Message</a></li>
+          </ul>
+          <!-- ################################################################################################ -->
         </nav>
       </header>

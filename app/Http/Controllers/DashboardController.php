@@ -43,4 +43,8 @@ class DashboardController extends Controller
         public function profile(){
             return view('pro.profile');
         }
+
+        public function supprofile(){
+            return view('super.profile');
+        }
 }
